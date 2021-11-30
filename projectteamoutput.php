@@ -27,6 +27,8 @@ if(isset($_GET['giin_cd'])){
 	$giinCd = "改訂#7526S";
 }
 
+echo $giinCd;
+
 $app = new SenkyoDBApp\Controller\ProjectTeamOutput();
 $app->run($giinCd);
 
