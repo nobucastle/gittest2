@@ -27,7 +27,7 @@ if(isset($_GET['giin_cd'])){
 	$giinCd = "改訂#7526S";
 }
 
-echo $giinCd;
+
 
 $app = new SenkyoDBApp\Controller\ProjectTeamOutput();
 $app->run($giinCd);
@@ -41,7 +41,7 @@ $kaiteiymd = str_replace("-", "/", $giins[0]["chuo_ymd__c"]);
 $kaiteiflg =  $giins[0]["kaitei_flg__c"];
 $syokan =  $giins[0]["syokan__c"];
 
-
+echo $giinCd;
 
 //foreach ($giins as $obj) {
 //	echo "【組織名】" . $obj["kaitei_soshiki_nm__c"] . "　【改訂日】" . $obj["kaitei_ymd__c"] . "<br/>";
