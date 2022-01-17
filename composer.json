@@ -1,0 +1,7 @@
+{
+    "name": "mycomposer/komeikakutai",
+    "require": {
+        "ext-mbstring": "*",
+        "phpoffice/phpspreadsheet": "^1.14"
+    }
+}

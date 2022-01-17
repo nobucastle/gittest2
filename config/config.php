@@ -1,12 +1,17 @@
 <?php
 
 ini_set('display_errors', 1);
+ini_set("soap.wsdl_cache_enabled", "0");
 
 require_once(__DIR__ . '/../lib/functions.php');
 require_once(__DIR__ . '/autoload.php');
 
+//セールスフォース接続用設定ファイル
+require_once (__DIR__ .'/../ForceComToolkitForPHPmaster/soapclient/SforcePartnerClient.php');
+require_once (__DIR__ .'/../ForceComToolkitForPHPmaster/soapclient/SforceHeaderOptions.php');
+
 //データベース定義
-define('DB_HOST_SENKYO', 'SRVSC2');
+define('DB_HOST_SENKYO', 'SRVSC1');
 define('DB_DATABASE_SENKYO', 'senkyodb');
 define('DB_USERNAME_SENKYO', 'infsenkyo');
 define('DB_PASSWORD_SENKYO', 'infsenkyo0320');
@@ -23,3 +28,9 @@ session_start();
 header('Expires:-1');
 header('Cache-Control:');
 header('Pragma:');
+
+// セールスフォースとの接続情報
+define('SF_XML','./Force.com-Toolkit-for-PHP-master/soapclientpartner.wsdl.xml');
+define('SF_USER','renkei@komei.jp');
+define('SF_PW','ren1117sW7p2ixCUDsz0DZL6ErzBtA3');
+

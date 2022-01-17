@@ -2,7 +2,7 @@
 
 namespace SenkyoDBApp\Model;
 
-class ProjectTeamOutputModel extends \SenkyoDBApp\Model {
+class YakuinIinkaiOutputModel extends \SenkyoDBApp\Model {
 
 
 	  
@@ -19,7 +19,7 @@ class ProjectTeamOutputModel extends \SenkyoDBApp\Model {
 		$giin_iii = $values['giin_id'];
 
 		//データ取得
-		$query = "SELECT kaitei_soshiki_nm__c, genkyu__c, kaitei_ymd__c, syokan__c, shinki_ymd__c, chuo_ymd__c, kaitei_flg__c, Id FROM PT_seicho_kaitei__c where NAME = '{$giin_iii}'";
+		$query = "SELECT soshiki_name_txt__c, genkyu__c, kaitei_ymd__c, kaitei_flg__c, Id FROM iinkai_kaitei__c where NAME = '{$giin_iii}'";
 		$response = $client->query($query);
 		$queryResult = new \QueryResult($response);
 	  
@@ -51,7 +51,7 @@ class ProjectTeamOutputModel extends \SenkyoDBApp\Model {
 		$giin_iii = $values['giin_id'];
 
 		//データ取得
-		$query = "SELECT name, 	yakusyoku__c, giin_name_txt__c, gikai_name__c FROM PT_seicho_kousei__c WHERE kaitei__c = '{$giin_iii}' ORDER BY JUN__c";
+		$query = "SELECT name, 	yakusyoku__c, giin_name_txt__c, gikai_name__c FROM iinkai_jinji__c WHERE kaitei__c = '{$giin_iii}' ORDER BY hyoji__c";
 		$response = $client->query($query);
 		$queryResult = new \QueryResult($response);
 

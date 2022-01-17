@@ -149,9 +149,9 @@ function SeirekiYmd($nenge, $code = '') {
     return $nenge;
   }
 
-  $nen = substr($nenge,0,4);
-  $getsu = substr($nenge,4,2);
-  $hizuke = substr($nenge,6,2);
+  $nen = intval(substr($nenge,0,4));
+  $getsu = intval(substr($nenge,4,2));
+  $hizuke = intval(substr($nenge,6,2));
 
   $rtnValue = $code === '' ? ($nen."年".$getsu."月".$hizuke."日") : ($nen.$code.$getsu.$code.$hizuke);
   
@@ -176,18 +176,27 @@ function GenshinFlg($value) {
 
 //フラグを各種記号に変換
 function FlgToMark($value) {
-  $rtnVal = "";
+
+	$rtnVal = "";
+
   if ($value->DATA6 == 1) {
-    $rtnVal = "推";
-  } elseif ($value->DATA7 == 1) {
-    $rtnVal = "※";
-  } elseif ($value->DATA12 == "議員団長") {
-    $rtnVal = "◇";
-  } elseif ($value->DATA12 == "幹事長") {
-    $rtnVal = "◎";
-  } elseif ($value->DATA12 == "副幹事長") {
-    $rtnVal = "○";
+    $rtnVal .= "推";
   }
+	
+  if ($value->DATA7 == 1) {
+    $rtnVal .= "※";
+  }
+	
+	if ($value->DATA12 == "議員団長") {
+    $rtnVal .= "◇";
+  } elseif ($value->DATA12 == "幹事長") {
+    $rtnVal .= "◎";
+  } elseif ($value->DATA12 == "副幹事長") {
+    $rtnVal .= "○";
+  }
+	
+
+
   return $rtnVal;
 }
 
