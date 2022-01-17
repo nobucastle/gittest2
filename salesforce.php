@@ -1,5 +1,5 @@
 <?php
-echo __DIR__;
+
 require_once '/app/curl.php';
 
 /**
