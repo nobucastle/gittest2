@@ -1,7 +1,5 @@
 <?php
 
-echo __DIR__;
-
 require_once('/config/config.php');
 require 'vendor/autoload.php';
 
@@ -33,6 +31,7 @@ if(isset($_GET['giin_cd'])){
 $app = new SenkyoDBApp\Controller\ProjectTeamOutput();
 $app->run($giinCd);
 
+echo __DIR__;
 
 $giins = $app->getValues()->giins;
 //var_dump($giins);
