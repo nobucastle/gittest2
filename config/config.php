@@ -7,8 +7,8 @@ require_once('/lib/functions.php');
 require_once('/autoload.php');
 
 //セールスフォース接続用設定ファイル
-require_once ('ForceComToolkitForPHPmaster/soapclient/SforcePartnerClient.php');
-require_once ('ForceComToolkitForPHPmaster/soapclient/SforceHeaderOptions.php');
+require_once ('/ForceComToolkitForPHPmaster/soapclient/SforcePartnerClient.php');
+require_once ('/ForceComToolkitForPHPmaster/soapclient/SforceHeaderOptions.php');
 
 //データベース定義
 define('DB_HOST_SENKYO', 'SRVSC1');
