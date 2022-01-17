@@ -3,7 +3,7 @@
 
 
 require_once('/app/config/config.php');
-require 'vendor/autoload.php';
+require '/app/vendor/autoload.php';
 
 echo __DIR__;
 
