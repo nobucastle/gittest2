@@ -1,4 +1,7 @@
 <?php
+
+echo __DIR__;
+
 require_once('config/config.php');
 require 'vendor/autoload.php';
 
