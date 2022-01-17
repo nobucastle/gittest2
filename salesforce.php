@@ -1,6 +1,6 @@
 <?php
 echo __DIR__;
-require_once 'curl.php';
+require_once '/app/curl.php';
 
 /**
  * Salesforce APIを実行するクラス
