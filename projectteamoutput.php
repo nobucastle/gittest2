@@ -1,10 +1,11 @@
 <?php
 
-echo __DIR__;
+
 
 require_once('/config/config.php');
 require 'vendor/autoload.php';
 
+echo __DIR__;
 
 ini_set( 'display_errors', 1 );
 ini_set( 'error_reporting', E_ALL );
