@@ -3,7 +3,7 @@ require_once '/app/salesforce.php';
 
 #読み込み処理
 print_r(Salesforce::read('0010o00002nJtDUMMY'));
-echo __DIR__;
+
 
 /* 成功した場合
 Array
