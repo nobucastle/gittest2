@@ -48,7 +48,7 @@ return [
             'duration' => '+1 years',
         ],
     ],*/
-
+    /*
     'Datasources' => [
         'default' => [
             'className' => 'Cake\Database\Connection',
@@ -57,6 +57,7 @@ return [
             'host' => $db['host'],
             'username' => $db['user'],
             'password' => $db['pass'],
+            'database' => ltrim($db["path"],'/'),
             'port' => $db["port"],
             'encoding' => 'utf8',
             'timezone' => 'UTC',
@@ -64,6 +65,7 @@ return [
             'quoteIdentifiers' => false,
         ],
     ],
+	*/
 
     'Log' => [
         'debug' => [
