@@ -3,7 +3,7 @@
 ini_set('display_errors', 1);
 ini_set("soap.wsdl_cache_enabled", "0");
 
-require_once('/lib/functions.php');
+require_once('/app/lib/functions.php');
 require_once('/autoload.php');
 
 //セールスフォース接続用設定ファイル
