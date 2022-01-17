@@ -19,7 +19,7 @@
            $this->autoRender = false;
            
             try{
-                $query = 'SELECT Id,Name FROM ACCOUNT LIMIT 100';
+                $query = 'SELECT Id,Name FROM pt_taisaku__c LIMIT 100';
                 $crud = new Salesforce\CRUD();
                 $result = $crud->query($query);
 
