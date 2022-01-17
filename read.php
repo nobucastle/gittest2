@@ -1,5 +1,5 @@
 <?php
-require_once 'salesforce.php';
+require_once '/app/salesforce.php';
 
 #読み込み処理
 print_r(Salesforce::read('0010o00002nJtDUMMY'));
