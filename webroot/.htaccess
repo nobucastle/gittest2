@@ -1,0 +1,25 @@
+SetEnvIf X-Forwarded-For 133.242.51.108 tsc-sakura-vpn
+SetEnvIf X-Forwarded-For 52.194.134.32 tsc-ec2-vpn
+SetEnvIf X-Forwarded-For 118.238.12.88 tsc1
+SetEnvIf X-Forwarded-For 118.238.12.85 tsc2
+SetEnvIf X-Forwarded-For 118.238.12.65 tsc3
+SetEnvIf X-Forwarded-For 182.248.221.217 komei
+SetEnvIf X-Forwarded-For 126.226.200.26 wifi
+
+order deny,allow
+deny  from all
+allow from env=tsc-sakura-vpn
+allow from env=tsc-ec2-vpn
+allow from env=tsc1
+allow from env=tsc2
+allow from env=tsc3
+allow from env=komei
+allow from env=wifi
+allow from 127.0.0.1
+allow from ::1
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
